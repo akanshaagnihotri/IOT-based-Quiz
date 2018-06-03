@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="./Js/app.js"></script>
+    <style>
+    .mainBody {
+        background-image: url("./Images/reading.jpg");
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .heading {
+        font-weight: bold;
+        color: #05053e;
+        text-shadow: 0.5px 0.5px 1px #101015;
+        text-decoration: underline;
+    }
+
+    .mainCard {
+        color: white;
+        height: 85vh;
+        width: 90vw;
+        margin-left:5vw;
+        z-index: 200;
+        background-color: rgba(0, 0, 0, 0.8);
+        ;
+    }
+    .quesans{
+    	font-size: 30px;
+    margin-left: 47px;
+    margin-top: 20px;
+    }
+    </style>
+</head>
+
+<body ng-app="Project" class="mainBody" ng-cloak ng-controller="ledCtrl as main">
+    <center>
+        <h1 class="heading">Check ur Knowledge ???</h1></center>
+    
+        <div class="mainCard">
+            <div class="quesans" ng-repeat="item in questions">{{item.ques}} 
+           <button type="button" class="btn btn-primary" style="float:right;"  ng-click="right(true,$index)">True</button>
+           <button type="button" class="btn btn-danger" style="float:right;"  ng-click="wrong(false,$index)">False</button>
+           </div>
+        </div>
+        <!-- <md-radio-group ng-model="val" ng-click="hello(val)">
+                <md-radio-button ng-value="true">true</md-radio-button>
+                <md-radio-button ng-value="false"> false </md-radio-button>
+            </md-radio-group> -->
+        </div>
+    <
+</body>
+
+</html>
